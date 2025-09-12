@@ -44,6 +44,13 @@ h1 {
 .answer {
     font-size: 1rem;
     line-height: 1.7;
+    text-align: justify;
+    text-align-last: left
+}
+
+.question p,
+.answer p {
+    margin-bottom: 1.2rem;
 }
 
 code, .token {
