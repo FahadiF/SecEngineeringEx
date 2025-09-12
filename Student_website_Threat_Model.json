@@ -283,7 +283,7 @@
           },
           {
             "position": {
-              "x": 562,
+              "x": 561.9999999999992,
               "y": 430
             },
             "size": {
@@ -397,7 +397,29 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "bb9c782d-867c-4007-8114-e78e73d8627f",
+                  "title": "Server Overload via DDoS Attack",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "The attackers may use Distributed Denial of Service (DDoS) method to flood the server with repeatedly high amount of auto-generated traffic to overload the server bandwidth, making the website unavailable to real users.",
+                  "mitigation": "Rate-limiting and implementing a Content Delivery Network (CDN) like Cloudflare can be used to mitigate DDoS attacks and distribute the load.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -414,11 +436,13 @@
                 "text": "Website Config"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -514,7 +538,7 @@
               "description": "HTML and CSS for the website",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -522,21 +546,21 @@
               "storesInventory": false,
               "threats": [
                 {
-                  "id": "c54784ef-060c-42da-b5f8-9ee2113894cd",
-                  "title": "Server Overload via DDoS Attack",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Denial of service",
-                  "description": "The attackers may use Distributed Denial of Service (DDoS) method to flood the server with repeatedly high amount of auto-generated traffic to overload the server bandwidth, making the website unavailable to real users.",
-                  "mitigation": "Rate-limiting and implementing a Content Delivery Network (CDN) like Cloudflare can be used to mitigate DDoS attacks and distribute the load.",
+                  "id": "171bb855-c961-4f39-9aa4-ea7be3915602",
+                  "title": "Impersonation via Fake SSH Key",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker may spoof their identity by creating a fake SSH key, allowing them to impersonate an authorized user or admin and access sensitive resources.",
+                  "mitigation": "Need to maintain strict SSH key management policies and regularly audit and rotate SSH keys.",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 7,
+                  "number": 25,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 0,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 4
@@ -849,6 +873,10 @@
             },
             "vertices": [
               {
+                "x": 1280,
+                "y": 330
+              },
+              {
                 "x": 1290,
                 "y": 321
               }
@@ -901,8 +929,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -923,26 +950,12 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "18a9640b-869b-43da-b5b1-03cbb3f05c37",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 8,
-                  "score": ""
-                }
-              ]
+              "threats": []
             },
             "labels": [
               "SSH Connection."
@@ -955,6 +968,10 @@
               "cell": "21b0bd9b-0dd1-4f3b-8b22-10a732650689"
             },
             "vertices": [
+              {
+                "x": 1150,
+                "y": 750
+              },
               {
                 "x": 1180,
                 "y": 670
@@ -1051,8 +1068,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1073,26 +1089,12 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "bdd6b91c-66a8-40d0-9c08-407e510987fa",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 9,
-                  "score": ""
-                }
-              ]
+              "threats": []
             },
             "labels": [
               "SSH Keys / Password"
@@ -1268,11 +1270,13 @@
                 "text": "Containers logs"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1368,7 +1372,7 @@
               "description": "Container monitoring via Falco",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1377,12 +1381,12 @@
               "threats": [
                 {
                   "id": "72ecf5de-4cfd-4d6f-88b7-b4d950e24579",
-                  "title": "Untraceable Actions by the Student",
-                  "status": "Mitigated",
-                  "severity": "Low",
+                  "title": "Unauthorized Access to Logs or System Files",
+                  "status": "Open",
+                  "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "If logs are not not maintained properly, a student might perform actions, such as deleting their profile or modifying their personal information, and deny doing so because there are no proper logs or tracking mechanisms in place. This lack of accountability can lead to confusion or disputes.",
-                  "mitigation": "Implement detailed logging for every action taken on the system and ensure logs are stored securely and cannot be tampered with.",
+                  "description": "An attacker could delete or alter system logs to cover their tracks after performing malicious actions (e.g., modifying Docker images or website config).",
+                  "mitigation": "Ensure log integrity by using immutable logs and monitoring systems to alert administrators on log tampering attempts.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -1391,7 +1395,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1641,25 +1645,24 @@
               "threats": [
                 {
                   "id": "b95fe44b-5829-45c2-9385-f6d215b20c95",
-                  "title": "New STRIDE threat",
+                  "title": "Compromised Website Configuration Files",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Attackers may modify Nginx configuration files to redirect users to malicious sites or modify the behavior of the site.",
+                  "mitigation": "Store configuration files securely and implement proper file permissions. Regularly monitor and audit configurations for any unauthorized changes.",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 12,
                   "score": ""
                 }
-              ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
               ],
-              "name": null
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2024,7 +2027,27 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c789428e-2913-483a-a675-3488d44e0473",
+                  "title": "Exposure of Student Data",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "If the website or Docker containers aren't properly secured, sensitive student data (e.g., portfolio details) could be exposed. Also they may gain access to personal data (e.g., names, email addresses, phone number etc.).",
+                  "mitigation": "Always encrypt sensitive data both at rest (e.g., databases) and in transit (e.g., HTTPS). Implement role-based access control (RBAC) to limit access to sensitive data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2041,11 +2064,13 @@
                 "text": "SSH credentials"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2141,7 +2166,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": true,
               "isSigned": false,
@@ -2149,16 +2174,16 @@
               "storesInventory": false,
               "threats": [
                 {
-                  "id": "b4e16490-4979-40c9-89c8-adc870af0113",
+                  "id": "f70d2e8c-d552-4da0-bcca-5d97f86dbf62",
                   "title": "SSH Access to Admin and User Roles",
-                  "status": "Mitigated",
-                  "severity": "Medium",
+                  "status": "Open",
+                  "severity": "High",
                   "type": "Tampering",
                   "description": "If SSH credentials are weakly secured or somehow compromised, an attacker can escalate privileges to gain root access or access to sensitive user data.",
                   "mitigation": "Use SSH key-based authentication and disable password-based authentication. Also, restrict SSH access with a firewall.",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 11,
+                  "number": 26,
                   "score": ""
                 }
               ],
@@ -2406,7 +2431,11 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": true,
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2645,7 +2674,13 @@
               "isSigned": false,
               "storesCredentials": true,
               "storesInventory": false,
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2761,13 +2796,31 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0c3e7076-6125-46fc-a641-0ad58b53e902",
+                  "title": "Untraceable Actions by the Student",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "If logs are not not maintained properly, a student might perform actions, such as deleting their profile or modifying their personal information, and deny doing so because there are no proper logs or tracking mechanisms in place. This lack of accountability can lead to confusion or disputes.",
+                  "mitigation": "Implement detailed logging for every action taken on the system and ensure logs are stored securely and cannot be tampered with.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
             "position": {
               "x": 678,
-              "y": 471
+              "y": 471.0000000000008
             },
             "size": {
               "width": 112.5,
@@ -2886,6 +2939,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Fahad Ibne Fahian",
-    "threatTop": 12
+    "threatTop": 26
   }
 }
