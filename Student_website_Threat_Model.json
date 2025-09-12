@@ -260,7 +260,25 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d1710eb2-8bd6-4f7c-bbff-1a151faa029a",
+                  "title": "Phishing Attack on Student Credentials",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "The attacker can use a phishing attack  by creating a fake the student login page in to steal their credentials.",
+                  "mitigation": "The user should check the URL carefully before using, avoid clicking on any suspicious links found online and also use 2FA, which can prevent the attacker from logging in even if they've stolen the credentials. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -633,7 +651,26 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "19253fc8-3bad-4c5b-aec1-21f2a3bfea99",
+                  "title": "Man-in-the-Middle Attack (MITM) during HTTP Requests",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "If the student is using public network (wifi) or if the website/application is using Unsecured connection (HTTP) instead of HTTPS, then an attacker can tamper with requests sent between the browser and server. They can manipulate and steal the data.",
+                  "mitigation": "Use VPN or avoid using public Wifi and use HTTPS to encrypt all data for communication to ensure the security of the data during transmission.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Request type : HTTP/HTTPS "
@@ -2712,6 +2749,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Fahad Ibne Fahian",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
