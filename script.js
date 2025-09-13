@@ -20,26 +20,29 @@ function closeWindow() {
     }
 }
 
-// Image Modal
+// Image Modal Functionality
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const downloadLink = document.getElementById('downloadLink');
     const closeBtn = document.querySelector('.modal-close');
-    const img = document.querySelector('.clickable-image');
+    const images = document.querySelectorAll('.clickable-image');
 
-    // Open modal on image click
-    img.addEventListener('click', function () {
-        modal.style.display = 'flex';
-        modalImg.src = this.src;
-        downloadLink.href = this.src;
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    // Open modal on any image click
+    images.forEach(img => {
+        img.addEventListener('click', function () {
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            downloadLink.href = this.src;
+            downloadLink.download = this.src.split('/').pop(); // Set filename
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
     });
 
     // Close modal
     closeBtn.addEventListener('click', function () {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
+        document.body.style.overflow = 'auto';
     });
 
     // Close if clicking outside the image
