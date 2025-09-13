@@ -11,15 +11,6 @@ function toggleTheme() {
     btn.textContent = document.body.classList.contains('dark-mode') ? '🔆' : '🌙';
 }
 
-// Close Window
-function closeWindow() {
-    if (window.close) {
-        window.close();
-    } else {
-        alert("Your browser prevented the window from closing automatically. Please close it manually.");
-    }
-}
-
 // Image Modal Functionality
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('imageModal');
@@ -53,3 +44,44 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Scroll to Bottom Button
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Existing modal and theme code...
+
+    // Scroll to Bottom Button
+    const scrollToBottomBtn = document.getElementById('scrollToBottomBtn');
+
+    if (!scrollToBottomBtn) {
+        console.error('Scroll to bottom button not found!');
+        return;
+    }
+
+    // Show button after scrolling down
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            scrollToBottomBtn.style.display = 'flex'; // or 'block'
+        } else {
+            scrollToBottomBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to bottom on click
+    scrollToBottomBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+// Thank you Button
+function closeWindow() {
+    if (window.close) {
+        window.close();
+    } else {
+        alert("Your browser prevented the window from closing automatically. Please close it manually.");
+    }
+}
