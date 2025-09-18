@@ -1,6 +1,3 @@
-/* -------------------------------------------------
-   0️⃣  CSS VARIABLES
-   ------------------------------------------------- */
 :root {
     --bg-color-dark: #121212;
     --bg-color-light: #ffffff;
@@ -13,77 +10,91 @@
     --accent-color: #bb86fc;
     --border-color-dark: #333;
     --border-color-light: #ccc;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
-                    Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
 }
 
-/* -------------------------------------------------
-   1️⃣  GLOBAL RESET
-   ------------------------------------------------- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* -------------------------------------------------
-   2️⃣  BASE STYLES
-   ------------------------------------------------- */
-html {
-    scroll-behavior: smooth;
-}
 body {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
     font-family: var(--font-family);
-    font-size: 1rem;
+    font-size: 1rem; 
     line-height: 1.6;
     padding: 2rem;
     transition: background-color 0.3s, color 0.3s;
 }
+
 body.light-mode {
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
 }
 
-/* Headings */
 h1 {
     font-size: 2.2rem;
     line-height: 1.3;
 }
-h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
 
-/* -------------------------------------------------
-   3️⃣  TEXT & CODE
-   ------------------------------------------------- */
 .question,
 .answer {
     font-size: 1rem;
     line-height: 1.7;
     text-align: justify;
-    text-align-last: left;
+    text-align-last: left
 }
+
 .question p,
 .answer p {
     margin-bottom: 1.2rem;
 }
-code,
-.token {
+
+code, .token {
     font-family: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
     background: rgba(255,255,255,0.08);
     padding: 0.1rem 0.3rem;
     border-radius: 4px;
 }
+
 body.light-mode code {
     background: rgba(0,0,0,0.08);
 }
 
-/* -------------------------------------------------
-   4️⃣  CONTAINER (used on the Q&A pages)
-   ------------------------------------------------- */
+
+/*Button Styles */
+       .home-icon {
+            font-size: 1.2rem; /* Icon size */
+            color: #a5afaff3; /* Icon color */
+            text-shadow: #524f4f 1px 2px 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 5%; /* Distance from the left edge */
+            top: 18%; /* Vertically center the icon */
+            transform: translateY(-50%); /* Adjust for perfect centering */
+            z-index: 10;
+        }
+
+        /* Hover Effect */
+        .home-icon:hover {
+            color: #dbc5e6; /* Darker blue on hover */
+            transform: translateY(-50%) translateY(-5px); /* Slight lift effect */
+        }
+
+        /* Active State */
+        .home-icon:active {
+            color: #004085; /* Even darker blue when clicked */
+            transform: translateY(-50%) translateY(1px); /* Button press effect */
+        }
+
+.close-button {
+    font-size: 1.05rem;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -94,14 +105,34 @@ body.light-mode code {
     text-align: center;
     position: relative;
 }
+
+/* Light mode container */
 body.light-mode .container {
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* -------------------------------------------------
-   5️⃣  FIXED HEADER (sticky on top)
-   ------------------------------------------------- */
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    text-shadow: #524f4f 1px 1px 2px;
+    cursor: pointer;
+    color: var(--accent-color);
+    z-index: 10;
+    
+}
+
+body.light-mode .theme-toggle {
+    color: var(--text-color-light);
+}
+
+/* Fixed Header Start */
+
 .fixed-header {
     position: sticky;
     top: 0;
@@ -111,70 +142,66 @@ body.light-mode .container {
     z-index: 100;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 body.light-mode .fixed-header {
     background-color: #ffffff;
 }
 
-/* Theme toggle button (inside the fixed header) */
-.theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--accent-color);
-    z-index: 10;
-}
-body.light-mode .theme-toggle {
-    color: var(--text-color-light);
+/* Scrollable Content */
+.scrollable-content {
+    margin-top: 0;
+    padding-top: 1rem;
 }
 
-/* User info (inside header) */
+/* Fixed Header End */
+
 .user-header {
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .user-header h1 {
     margin-bottom: 1rem;
     color: var(--text-color-dark);
 }
+
 body.light-mode .user-header h1 {
     color: var(--text-color-light);
 }
+
 .user-info {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: #aaa;
 }
+
 .user-info .editable {
     color: var(--text-color-dark);
     font-weight: 500;
 }
+
 body.light-mode .user-info .editable {
     color: var(--text-color-light);
 }
+
 .email-link {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
 }
+
 .email-link:hover {
     text-decoration: underline;
 }
 
-/* -------------------------------------------------
-   6️⃣  QUESTION / ANSWER BLOCKS
-   ------------------------------------------------- */
 .qa-pair {
     margin-bottom: 1.5rem;
 }
 
-/* Question */
+/* Question styling with proper icon spacing */
 .question {
     background: var(--question-bg-dark);
-    padding: 1.5rem 1.75rem 1.5rem 3rem; /* left padding leaves room for icon */
+    padding: 1.5rem 1.75rem 1.5rem 3rem;
     border-radius: 8px;
     border: 1px dashed #555;
     margin-bottom: 0.75rem;
@@ -182,54 +209,59 @@ body.light-mode .user-info .editable {
     font-style: italic;
     color: #ccc;
 }
+
 body.light-mode .question {
     background: var(--question-bg-light);
     border-color: var(--border-color-light);
     color: var(--text-color-light);
 }
+
+/* Question icon positioning */
 .question .icon {
     position: absolute;
-    top: 0.75rem;
+    top: 0.75rem;  /* Moved down slightly */
     left: 0.75rem;
     font-size: 1.4rem;
     color: #ccc;
 }
+
 body.light-mode .question .icon {
     color: var(--text-color-light);
 }
 
-/* Answer */
+/* Answer styling with proper icon spacing */
 .answer {
     background: var(--answer-bg-dark);
-    padding: 1.5rem 1.75rem 1.5rem 3rem;
+    padding: 1.5rem 1.75rem 1.5rem 3rem; /* Added more left padding: 3rem */
     border-radius: 8px;
     border: 1px solid var(--border-color-dark);
     position: relative;
     font-style: normal;
     color: var(--text-color-dark);
 }
+
 body.light-mode .answer {
     background: var(--answer-bg-light);
     border-color: var(--border-color-light);
     color: var(--text-color-light);
 }
+
+/*  Answer icon positioning */
 .answer .icon {
     position: absolute;
     top: 0.75rem;
-    left: 0.75rem;
+    left: 0.75rem; 
     font-size: 1.4rem;
     color: var(--accent-color);
 }
 
-/* -------------------------------------------------
-   7️⃣  DOWNLOAD BUTTONS (inside answers)
-   ------------------------------------------------- */
 .downloads {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
+
 .download-btn {
     display: inline-flex;
     align-items: center;
@@ -240,25 +272,29 @@ body.light-mode .answer {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    color: #fff;
 }
+
 .download-btn.pdf {
     background-color: #1e88e5ce;
+    color: white;
 }
+
 .download-btn.json {
     background-color: #6200ea9d;
+    color: white;
 }
+
 .download-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 .download-btn i {
     font-size: 1.25rem;
 }
 
-/* -------------------------------------------------
-   8️⃣  IMAGE ANSWER + MODAL (click‑to‑enlarge)
-   ------------------------------------------------- */
+/* Image Answer */
+
 .image-answer {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -268,15 +304,18 @@ body.light-mode .answer {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 .image-link {
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s ease;
 }
+
 .image-link:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 .responsive-image {
     max-width: 100%;
     height: auto;
@@ -285,7 +324,7 @@ body.light-mode .answer {
     cursor: pointer;
 }
 
-/* Modal */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -300,6 +339,7 @@ body.light-mode .answer {
     flex-direction: column;
     padding: 20px;
 }
+
 .modal-content {
     max-width: 90%;
     max-height: 80vh;
@@ -307,6 +347,7 @@ body.light-mode .answer {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     animation: fadeIn 0.3s;
 }
+
 .modal-close {
     position: absolute;
     top: 20px;
@@ -317,6 +358,7 @@ body.light-mode .answer {
     background: none;
     border: none;
 }
+
 .download-btn-modal {
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
@@ -326,70 +368,47 @@ body.light-mode .answer {
     border-radius: 6px;
     font-weight: 500;
 }
+
 .download-btn-modal:hover {
     background-color: #a259f9;
 }
 
-/* -------------------------------------------------
-   9️⃣  TASK BUTTONS (front‑page navigation)
-   ------------------------------------------------- */
-.task-buttons {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: var(--question-bg-dark);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.212);
-}
 
-/* Light‑mode override for the container background */
-body.light-mode .task-buttons,
-body.light-mode .task-links {
-    background: var(--question-bg-light);
-}
-
-/* Button grid – vertical layout */
-.button-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: stretch;   /* full‑width buttons */
-}
-
-/* Individual button */
-.task-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Center close button */
+.center-button {
+    margin-top: 2rem;
     text-align: center;
-    padding: 1rem 0.5rem;
-    background: #ffffff61;
-    color: #fff;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-.task-button i {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-.task-button:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    background: #a259f9;
 }
 
-/* Light‑mode button text colour (optional) */
-body.light-mode .task-button {
-    color: #212121;                /* dark text for readability */
-    background: #ffffff61;   /* keep accent colour or change */
+.close-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;    
+    background-color: #ffffffc2;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* -------------------------------------------------
-   10️⃣  SCROLL BUTTONS
-   ------------------------------------------------- */
+.close-button:hover {
+    background-color: #c3a3e9;
+    transform: scale(1.02);
+}
+
+.close-button:active {
+    transform: scale(0.98);
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Scroll Button */
 
 .scroll-btn {
     position: fixed;
@@ -422,7 +441,6 @@ body.light-mode .task-button {
 .scroll-btn.top-btn {
     bottom: 80px;   /* space between the two buttons */
 }
-
 /* Footer Styles */
 .site-footer {
     /* position: fixed; */
@@ -435,41 +453,6 @@ body.light-mode .task-button {
 
 body.light-mode .site-footer {
     color: var(--text-color-light);
-}
-
-/* Set current year dynamically */
-
-
-/* -------------------------------------------------
-   11️⃣  CLOSE BUTTON (inside Q&A pages)
-   ------------------------------------------------- */
-.close-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #bb86fcc2;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-.close-button:hover {
-    background-color: #a259f9;
-    transform: scale(1.02);
-}
-.close-button:active {
-    transform: scale(0.98);
-}
-
-/* -------------------------------------------------
-   12️⃣  FOCUS OUTLINE (accessibility)
-   ------------------------------------------------- */
-button:focus,
-a:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
 }
 
 /* -------------------------------------------------
@@ -488,85 +471,83 @@ body.light-mode .placeholder {
 }
 .placeholder-icon {
     font-size: 4rem;
-    /* color: var(--accent-color); */
-    text-shadow: #1a1a1a 1px;
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 .placeholder-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-color-dark);
-    margin-top: 1rem;
 }
 body.light-mode .placeholder-text {
     color: var(--text-color-light);
 }
 
+/* Print-friendly styles */
 
-/* -------------------------------------------------
-   13️⃣  PRINT‑FRIENDLY STYLES
-   ------------------------------------------------- */
 @media print {
     body {
-        background-color: #fff !important;
-        color: #000 !important;
+        background-color: white !important;
+        color: black !important;
     }
-    .theme-toggle,
-    .close-button {
+    .theme-toggle, .close-button {
         display: none;
     }
-    .container,
-    .task-buttons,
-    .task-links {
+    .container {
         box-shadow: none;
-        background-color: #fff;
+        background-color: white;
     }
-    .question,
-    .answer {
+    .question, .answer {
         border: 1px solid #000;
-        background: #fff;
+        background: white;
     }
     .icon {
-        color: #000 !important;
+        color: black !important;
     }
 }
 
-/* -------------------------------------------------
-   14️⃣  MOBILE‑SPECIFIC ADJUSTMENTS
-   ------------------------------------------------- */
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-    .container,
-    .task-buttons,
-    .task-links {
-        padding: 1rem;
-        max-width: 95%;
+    .container {
+        padding: 1rem; /* More breathing room on small screens */
+        max-width: 95%; /* Slightly wider on mobile */
     }
-
+    
+    /* Adjust text sizes */
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Slightly smaller heading */
     }
-
+    
     .question,
     .answer {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        padding: 1.25rem 1.25rem 1.25rem 2.5rem;   /* reduced left padding */
+        font-size: 0.95rem; /* Slightly smaller text */
+        line-height: 1.6; /* Tighter line height */
     }
-
+    
+    /* Adjust question/answer padding */
+    .question,
+    .answer {
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem; /* Reduced padding */
+    }
+    
+    /* Adjust icon positioning */
     .question .icon,
     .answer .icon {
         top: 0.8rem;
         left: 0.8rem;
         font-size: 1.3rem;
     }
-
+    
+    /* Download buttons adjustment */
     .downloads {
-        flex-direction: column;
+        flex-direction: column; /* Stack buttons vertically */
         gap: 0.75rem;
     }
+    
     .download-btn {
-        width: 100%;
+        width: 100%; /* Full width buttons */
         text-align: center;
     }
+}
 
     .scroll-btn {
         width: 44px;
@@ -577,5 +558,4 @@ body.light-mode .placeholder-text {
     }
     .scroll-btn.top-btn {
         bottom: 70px;
-    }
-}
+} 

@@ -7,281 +7,68 @@
     <title>Security Engineering Exercises</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="dark-mode">
-    <div class="container">
 
-        <header class="fixed-header">
-
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle between light and dark mode">
-                🔆
-            </button>
-            <div class="user-header">
-                <h1>Week 1 Exercise Answers</h1>
-                <p class="user-info">
-                    <strong>Student:</strong> <span class="editable">Fahad Ibne Fahian</span><br>
-                    <strong>Email:</strong> <a href="mailto:fahad.fahian@student.oulu.fi"
-                        class="email-link">fahad.fahian@student.oulu.fi</a>
-                </p>
-            </div>
-        </header>
-
-        <!-- Scrollable Content -->
-        <div class="scrollable-content">
-
-            <!-- Task 1 -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <strong>Task 1 (Summary):</strong> What measures have you taken to protect yourself from cyber
-                    crimes? Write a short
-                    description of the actions you have done to fortify your defenses towards all sorts of cyber crimes.
-                    Have you been a victim of cyber crimes and do you think you could have prevented them? For example
-                    phishing and malware attacks. What could you improve on?
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-                    <p>
-                        I am using a premium Antivirus to protect my Windows operated PC against viruses, malwares and
-                        attacks from untrusted sources. I use an opensource password manager to store my passowords and
-                        generate strong password for each and every website or application. Also use 2FA when possible.
-                        I've
-                        installed adblocker and vpn on browsers and avoid opening untrusted links. And I try to keep all
-                        the
-                        softwares and applications up to date.
-                    </p>
-                    <p>
-                        I have been a victim of serious cyber attacks twice in my life. Once I got all my files
-                        encrypted by
-                        a ransomware attack, and the second time my personal information and data was stolen by a
-                        malware.
-                        Both of these attacks happened because I have used Modded OS and Softwares from untrusted
-                        sources. I
-                        was able to decrypt my data without paying the Bitcoin ransom by using a free decryption tool by
-                        kaspersky.
-                        But I lost a lot my personal data and information in the second attack. I could have prevented
-                        these
-                        attacks by avoiding using modded OS and softwares, and using trusted sources only.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Task 2 -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <strong>Task 2 (Summary):</strong> Pick two topics from the list to write a security policy on.
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-
-                    <h3>Topic 1: Password Policy</h3>
-
-                    <h4>Issue Statement:</h4>
-                    <p>The employees are responsible for keeping our passwords safe. Passwords are the first line of
-                        defense
-                        against hackers, so we need some basic rules to make sure they’re strong and secure.</p>
-
-                    <h4>Statement of the Organization's Position:</h4>
-                    <p>We need everyone to use strong passwords, not something easy like "123456" or your name, phone
-                        number, DOB etc. Passwords should be unique for every system, and you should change them every
-                        couple of months. Don’t share your passwords with anyone, and keep them stored in a safe place
-                        (maybe a password manager).</p>
-
-                    <h4>Applicability:</h4>
-                    <p>This applies to all employees who use company systems, accounts, or anything with sensitive data.
-                    </p>
-
-                    <h4>Roles and Responsibilities:</h4>
-                    <ul>
-                        <li><strong>Employees:</strong> Create strong passwords and change them regularly.</li>
-                        <li><strong>IT department:</strong> Make sure that all systems are well protected and assist if
-                            there’s a problem with the system or passwords.</li>
-                        <li><strong>Management:</strong> Make sure everyone knows the password policies and give
-                            training if needed.</li>
-                    </ul>
-
-                    <h4>Compliance:</h4>
-                    <p>If you don’t follow this policy, you may face consequences like account lockouts or warnings.
-                    </p>
-
-                    <h4>Points of Contact and Supplementary Information:</h4>
-                    <p>If you need help with passwords, reach out to the IT Support team.</p>
-
-                    <hr><br>
-
-                    <h3>BYOD (Bring Your Own Device) Policy</h3>
-
-                    <h4>Issue Statement:</h4>
-                    <p>This policy is about using personal devices like phones, tablets, or laptops for work. We want to
-                        make ssure that if you bring your own device, it should be secure and doesn’t put company's data
-                        at risk.</p>
-
-                    <h4>Statement of the Organization's Position:</h4>
-                    <p>Employees are allowed to bring their own devices to work, but they must follow basic security
-                        rules. Devices must have a password or PIN, and if you're using your device for work, you
-                        must make sure that it is safe. No unauthorized apps or software from untrusted sources should
-                        be installed. If you lose your device, it must be reported immediately.</p>
-
-                    <h4>Applicability:</h4>
-                    <p>This policy applies to all employees who use their personal devices to access company systems or
-                        data,
-                        whether at work or remotely.</p>
-
-                    <h4>Roles and Responsibilities:</h4>
-                    <ul>
-                        <li><strong>Employees:</strong> Make sure your device is secure and only use approved softwares
-                            for
-                            work-related tasks.</li>
-                        <li><strong>IT Department:</strong> Monitor devices and ensure security, help employees with any
-                            issues.</li>
-                        <li><strong>Management:</strong> Make sure that everyone understands the policy and is provided
-                            enough support
-                            for securing devices.</li>
-                    </ul>
-
-                    <h4>Compliance:</h4>
-                    <p>If you don’t follow the policy, there may be restrictions on using personal devices for work or
-                        other actions depending on the situation.</p>
-
-                    <h4>Points of Contact and Supplementary Information:</h4>
-                    <p>If you need any help with securing your personal device or questions about the policy, contact
-                        the IT
-                        department.</p>
-
-                </div>
-            </div>
-
-            <!-- Task 3A -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <p><strong>Task 3A (Summary):</strong> Threat Modelling using Threat Dragon</p>
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-                    <p>Please find the Threat Model and PDF attached below:</p>
-                    <div class="downloads">
-                        <a href="Downloads/3A_Student_website_Threat_Model_Report_FahadIF.pdf" download
-                            class="download-btn pdf">
-                            <i class="fas fa-file-pdf"></i> Download Threat Model Report (PDF)
-                        </a>
-                        <a href="Downloads/3A_Student_website_Threat_Model_FahadIF.json" download
-                            class="download-btn json">
-                            <i class="fas fa-file-code"></i> Download Threat Model (JSON)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task 3B -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <strong>Task 3B (Summary):</strong> Create a personal threat model to identify and assess potential
-                    threats to your
-                    assets
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-                    <div class="image-answer">
-                        <img src="Downloads/3B_Personal Cyber Security Threat Model.png"
-                            alt="Personal Cyber Sec Threat Model" class="responsive-image clickable-image">
-                    </div>
-                    <!-- Image Modal -->
-                    <div id="imageModal" class="modal">
-                        <span class="modal-close">&times;</span>
-                        <img class="modal-content" id="modalImage">
-                        <a id="downloadLink" class="download-btn-modal" download>Download Image</a>
-                    </div>
-                    <!-- Image Modal End -->
-                    <div class="downloads">
-                        <a href="Downloads/3B_Personal Cyber Security Threat Model Report_FahadIF.pdf" download
-                            class="download-btn pdf">
-                            <i class="fas fa-file-pdf"></i> Download Threat Model Report (PDF)
-                        </a>
-                        <a href="Downloads/3B_Personal Cyber Security Threat Model.json" download
-                            class="download-btn json">
-                            <i class="fas fa-file-code"></i> Download Threat Model (JSON)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task 4A -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <strong>Task 4A (Summary):</strong> Scan network using Nmap and answer the following questions.
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-                    1. Did you find devices you did not know were in your network?
-                    <br><br>
-                    <strong>No, I didn't find any unknown devices in my network. All the devices detected by nmap were
-                        known to me.</strong>
-                    <br><br>
-                    2. Were there open ports which should have been closed?
-                    <br><br>
-                    <strong>Answer: Yes, I found some open ports that should have been closed.</strong>
-                    <br><br>
-                    3. Did nmap find any vulnerabilities with the scripts?
-                    <br><br>
-                    <strong>Answer: No, Nmap did not find any vulnerabilities using its scripts.</strong>
-                    <br><br>
-                    4. Screenshot of the topology of your network. You can redact device information if you want.
-                    <div class="image-answer">
-                        <img src="Downloads/4A_Nmap Network Topology.png" alt="Nmap Network Topology"
-                            class="responsive-image clickable-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task 4B -->
-            <div class="qa-pair">
-                <div class="question">
-                    <span class="icon">❓</span>
-                    <strong>Task 4B (Account Security):</strong> This part of task 4 is to check yourself with
-                    haveibeenpwned.
-                </div>
-                <div class="answer">
-                    <span class="icon">✅</span>
-                    1. Has your account details leaked?
-                    <br><br>
-                    <strong>Answer: Yes, some of my old account details have been leaked according to "haveibeenpwned".
-                        As I mentioned earlier, I have been a victim of a data breach a few years ago.</strong>
-                    <br><br>
-                    2. Screenshot of haveibeenpwned search, you can redact information if you want.
-                    <div class="image-answer">
-                        <img src="Downloads/4B_haveibeenpwned Search Result.png" alt="haveibeenpwned Search Result"
-                            class="responsive-image clickable-image">
-                    </div>
-                    <br>
-                    3. Did you change passwords and/or email + password combos, that were leaked, if not, do it.
-                    <br><br>
-                    <strong>Answer: Yes, I have changed the passwords for the accounts that I have found to be leaked. I
-                        have also enabled 2FA, email and phone verification while logging in from new ips and new login
-                        alerts.</strong>
-                </div>
-
-                <div class="center-button">
-                    <button class="close-button" onclick="closeWindow()">Thank You!</button>
-                </div>
-
-            </div>
-
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🔆</button>
+        <div class="user-header">           
+            <h1><br>Security Engineering Course Exercises</h1>
+            <p class="user-info">
+                <strong>Student:</strong> <span class="editable">Fahad Ibne Fahian</span><br>
+                <strong>Email:</strong> <a href="mailto:fahad.fahian@student.oulu.fi"
+                    class="email-link">fahad.fahian@student.oulu.fi</a>
+            </p>
         </div>
 
-        <script src="script.js"></script>
+    </header>
 
-        <!-- Scroll to Bottom Button -->
+    <!-- Navigation Buttons -->
+    <main class="task-buttons">
+        <div class="button-grid">
+            <a href="All_Exercises/Week_1/index.html" class="task-button">
+                <i class="fas fa-book"></i>
+                <span>Week 1</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Week 2</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-code"></i>
+                <span>Week 3</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-laptop-code"></i>
+                <span>Week 4</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-database"></i>
+                <span>Week 5</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-cogs"></i>
+                <span>Week 6</span>
+            </a>
+            <a href="All_Exercises/404/index.html" class="task-button">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Week 7</span>
+            </a>
+        </div>
+    </main>
+    
+    <!-- Scroll Buttons
+    <button id="scrollToBottomBtn" class="scroll-btn" title="Scroll to bottom"><i class="fas fa-arrow-down"></i></button>
+    <button id="scrollToTopBtn" class="scroll-btn top-btn" title="Scroll to top"><i class="fas fa-arrow-up"></i></button> -->
 
-        <button id="scrollToBottomBtn" class="scroll-btn" title="Scroll to bottom">
-            <i class="fas fa-arrow-down"></i>
-        </button>
-
+    <script src="script.js"></script>
 </body>
+
+<footer class="site-footer">
+    &copy; <span id="current-year"></span> Fahad Ibne Fahian. 
+</footer>
 
 </html>
