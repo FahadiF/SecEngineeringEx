@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 2 Tasks - Security Engineering</title>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+    <div class="container">
+
+        <header class="fixed-header">
+
+            <i class="fas fa-home home-icon" onclick="window.location.href='../../index.html'"></i>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🔆</button>
+
+            <div class="user-header">
+                <h1><br>Week 2 Exercise Answers</h1>
+                <p class="user-info">
+                    <strong>Student:</strong> <span class="editable">Fahad Ibne Fahian</span><br>
+                    <strong>Email:</strong> <a href="mailto:fahad.fahian@student.oulu.fi"
+                        class="email-link">fahad.fahian@student.oulu.fi</a>
+                </p>
+            </div>
+
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="scrollable-content">
+
+            <!-- Task 1 -->
+            <div class="qa-pair">
+                <div class="question">
+                    <span class="icon">❓</span>
+                    <strong>Task 1A</strong> Questions and Answers:
+                </div>
+                <div class="answer">
+                    <span class="icon">✅</span>
+                    <p><strong>1. What does the "Not Secure" warning mean in the first picture and what risks does
+                            visiting sites with the warning pose?</strong></p>
+                    <p>
+                        The "Not Secure" warning on the first site means the website is using HTTP (HyperText Transfer
+                        Protocol) instead
+                        of HTTPS (HyperText Transfer Protocol Secure). This means that the connection between the
+                        user and the website is not encrypted.
+                        <br><br>
+                        Visting sites like this involve a risk of man-in-the-middle attacks where hackers can intercept
+                        and manipulate the data we're sending. If we're entering sensitive information like passwords or
+                        credit card details, it could be easily stolen.
+                    </p>
+
+                    <p><strong>2. Why does the second site show up as "trusted" to the browser?</strong></p>
+                    <p>
+                        The second site (danskesbank.io) shows as trusted because it is using HTTPS (HyperText Transfer
+                        Protocol Secure) to secure the connection, which may prevent the man in the middle and spoofing
+                        attacks. The site is probably using a valid SSL certificate and the connection is encrypted.
+                    </p>
+
+                    <p><strong>3. What other ways are there to detect a phishing/scam site? Are there any
+                            tools available online?</strong>
+
+                    <p>
+                        I think one of the main ways to detect a phishing or scam site is by checking the URL. Scammers
+                        often try to make their website look like the real one by changing a letter or adding extra
+                        ones, like “danskebankk” instead of “danske bank.” So, we really need to pay close attention to
+                        the URL to make sure it’s correct.
+
+                        Also, I think we need to look for HTTPS in the website’s address. If it’s missing, that’s a
+                        major red flag. Another thing is to watch for any spelling mistakes or broken links on the site.
+                        If it feels off or looks unprofessional, then it might be a scam site.
+
+                        There are also some tools we can use to check if a site is safe. Websites like Google Safe
+                        Browsing or VirusTotal can tell us if the site has been flagged as unsafe. I think it’s also a
+                        good idea to use browser extensions that block malicious or phishing sites. Some antivirus
+                        programs, like kaspersky also
+                        have an option like safebrowsing, which can help protect us from these kinds of threats.
+                    </p>
+
+                    <p><strong>4. What is typosquatting and how does it relate to the pictures?</strong></p>
+                    <p>
+                        Typosquatting is when cybercriminals register domain names that are very similar to real
+                        websites but with small differences (like “danskebankk” or “danskebank.io”) in order to
+                        trick users into visiting their fake site. In the pictures, the second URL (danskesbank.io)
+                        might be an example of typosquatting, where the attacker uses a similar domain name to trick
+                        users into thinking it’s the official Danske Bank site. It also has SSL, so the users may not notice the small
+                        difference, which is why they might end up giving up their username and password on that phishing site.
+                    </p>
+
+                    <p><strong>° What is UDRP and how does it help in combatting typosquatting?</strong></p>
+                    <p>
+                        UDRP stands for Uniform Domain-Name Dispute-Resolution Policy. It’s a policy created by ICANN
+                        to help resolve disputes over domain names. If
+                        someone uses a domain name that’s similar to a company name (like Danske Bank), the company
+                        can file a complaint under the UDRP to get the domain taken down. This helps combat
+                        typosquatting by providing a process for companies to protect their brand and prevent others
+                        from using similar domains to trick users.
+                    </p>
+
+                    <p><strong>° If you were to own the domain ouspg.org and would be running your crypto banking app
+                            at bank.ouspg.org, what domains could you monitor for warning signs of possible phishing
+                            attempts against your customers?</strong></p>
+                    <p>
+                        If bank.ouspg.org was my domain, I would monitor other domains like:
+                    </p>
+                    <ul>
+                        <li>banks.ouspg.org (a common typo)</li>
+                        <li>bank-ouspg.org (adding a hyphen)</li>
+                        <li>ouspg-bank.org (swapping the name order)</li>
+                        <li>oouspg.org (double letters are common)</li>
+                        <li>ouspgg.org (extra letters or variations)</li>
+                    </ul>
+                    <p>
+                        Also, I'd monitor some other similar TLDs like .net, .com, or .io that could be used by typosquatters to help protect my
+                        website against phishing sites.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="qa-pair">
+                <div class="question">
+                    <span class="icon">❓</span>
+                    <strong>Task 2 
+                </div>
+
+                <div class="center-button">
+                    <button class="close-button" onclick="closeWindow()">Thank You!</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../../script.js"></script>
+
+        <!-- Scroll to Bottom Button -->
+
+        <button id="scrollToBottomBtn" class="scroll-btn" title="Scroll to bottom"><i
+                class="fas fa-arrow-down"></i></button>
+        <button id="scrollToTopBtn" class="scroll-btn top-btn" title="Scroll to top"><i
+                class="fas fa-arrow-up"></i></button>
+
+</body>
+
+<footer class="site-footer">
+    &copy; <span id="current-year"></span> Fahad Ibne Fahian.
+</footer>
+
+</html>
