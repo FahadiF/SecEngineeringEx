@@ -441,6 +441,18 @@ a:focus {
 .scroll-btn.top-btn {
     bottom: 80px;   /* space between the two buttons */
 }
+
+/* Reduce header height */
+.fixed-header {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Hide name/email on scroll */
+.hide-on-scroll .user-header p {
+    display: none;
+}s
+
 /* Footer Styles */
 .site-footer {
     /* position: fixed; */

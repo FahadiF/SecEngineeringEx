@@ -126,3 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }); // end DOMContentLoaded
 })(); // end IIFE
+
+
+// Hide name/email on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.fixed-header');
+    if (window.scrollY > 50) {
+        header.classList.add('hide-on-scroll');
+    } else {
+        header.classList.remove('hide-on-scroll');
+    }
+});
